@@ -56,5 +56,14 @@
       alter table Human_Resources
       alter column termdate date;
       ```
-  - x
-  - 
+  - now we are going to add new column 'age' based on 'birthdate' column.
+    ```sql
+    alter table Human_Resources
+    add age int;
+    ```
+    ```sql
+    update Human_Resources
+    set age = datediff(yy, birthdate, getdate());
+    ```
+
+# Data Analysis
